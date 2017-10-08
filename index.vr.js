@@ -1,17 +1,11 @@
 import React from 'react';
-import {
-  AppRegistry,
-  asset,
-  Pano,
-  Text,
-  View,
-} from 'react-vr';
+import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
 
 export default class panoImageViewer extends React.Component {
   render() {
     return (
       <View>
-        <Pano source={asset('chess-world.jpg')}/>
+        <Pano source={asset('chess-world.jpg')} />
         <Text
           style={{
             backgroundColor: '#777879',
@@ -22,13 +16,14 @@ export default class panoImageViewer extends React.Component {
             paddingRight: 0.2,
             textAlign: 'center',
             textAlignVertical: 'center',
-            transform: [{translate: [0, 0, -3]}],
-          }}>
+            transform: [{ translate: [0, 0, -3] }],
+          }}
+        >
           hello
         </Text>
       </View>
     );
   }
-};
+}
 
 AppRegistry.registerComponent('panoImageViewer', () => panoImageViewer);

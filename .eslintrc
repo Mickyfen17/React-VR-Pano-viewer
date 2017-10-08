@@ -1,0 +1,10 @@
+{
+  "extends": "prettier",
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      { "trailingComma": "all", "bracketSpacing": true }
+    ]
+  },
+  "plugins": ["prettier"]
+}

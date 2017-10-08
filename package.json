@@ -10,12 +10,14 @@
     "test": "jest"
   },
   "dependencies": {
+    "eslint-plugin-prettier": "^2.3.1",
     "ovrui": "~2.0.0",
+    "prettier": "^1.7.4",
     "react": "16.0.0",
     "react-native": "~0.48.0",
-    "three": "^0.87.0",
     "react-vr": "~2.0.0",
-    "react-vr-web": "~2.0.0"
+    "react-vr-web": "~2.0.0",
+    "three": "^0.87.0"
   },
   "devDependencies": {
     "babel-jest": "^19.0.0",
