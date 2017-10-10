@@ -1,28 +1,28 @@
 import React from 'react';
 import { AppRegistry, asset, Pano, Text, View } from 'react-vr';
+import images from './images';
 
 export default class panoImageViewer extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      panoImages: [],
+    };
+  }
+
+  componentWillMount() {
+    this.setState({ panoImages: images });
+  }
+
+  renderImages() {
+    // this.state.panoImages.map(panoImage => (
+    //   <Pano source={asset(panoImage.secure_url)} />
+    // ));
+    return <Pano source={{ uri: this.state.panoImages[1].secure_url }} />;
+  }
+
   render() {
-    return (
-      <View>
-        <Pano source={asset('chess-world.jpg')} />
-        <Text
-          style={{
-            backgroundColor: '#777879',
-            fontSize: 0.8,
-            fontWeight: '400',
-            layoutOrigin: [0.5, 0.5],
-            paddingLeft: 0.2,
-            paddingRight: 0.2,
-            textAlign: 'center',
-            textAlignVertical: 'center',
-            transform: [{ translate: [0, 0, -3] }],
-          }}
-        >
-          hello
-        </Text>
-      </View>
-    );
+    return <View>{this.renderImages()}</View>;
   }
 }
 
